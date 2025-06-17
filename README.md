@@ -1,6 +1,11 @@
-# EvoBloom - An AI Life Simulation
+# <img src="./.github/screenshots/logo.png" style="image-rendering: pixelated" height="30"> EvoBloom - An AI Life Simulation
 
 EvoBloom is a 2D simulation game developed in C# with the Godot Engine. It features autonomous creatures called "Bloomies" that inhabit a procedurally generated world. Players can observe Bloomies as they explore, satisfy their physiological needs (hunger, thirst), interact with the environment, and socialize with other Bloomies. The game aims to simulate emergent behaviors arising from a set of defined rules and interactions.
+
+Normal             |  Debug
+:-------------------------:|:-------------------------:
+![EvoBloom UI](.github/screenshots/ui.png) | ![EvoBloom Debug UI](.github/screenshots/ui_debug.png)
+*Normal gameplay view showing Bloomies in their natural environment with stats pannel* | *Debug view with memory visualization, and AI decision insights*
 
 ## Table of Contents
 
