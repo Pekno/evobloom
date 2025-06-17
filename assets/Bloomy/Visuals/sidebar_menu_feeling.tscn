@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci51lic2ihd43"]
+
+[ext_resource type="FontFile" uid="uid://drtgsb46o4paj" path="res://assets/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="1_g4ruo"]
+[ext_resource type="Script" uid="uid://d0p2jj25pyu6t" path="res://scripts/Bloomy/Visuals/SidebarMenuFeeling.cs" id="1_g7ty8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g7ty8"]
+font = ExtResource("1_g4ruo")
+
+[sub_resource type="LabelSettings" id="LabelSettings_djxo5"]
+font = ExtResource("1_g4ruo")
+font_size = 11
+
+[node name="Control" type="Control" node_paths=PackedStringArray("FeelingNameLabelNode", "FeelingSliderNode", "FeelingValueLabelNode")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_g7ty8")
+FeelingNameLabelNode = NodePath("HBoxContainer/FeelingNameLabel")
+FeelingSliderNode = NodePath("HBoxContainer/FeelingSlider")
+FeelingValueLabelNode = NodePath("HBoxContainer/FeelingValueLabel")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FeelingIcon" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="FeelingNameLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "FEELING"
+label_settings = SubResource("LabelSettings_g7ty8")
+
+[node name="FeelingSlider" type="HSlider" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+editable = false
+
+[node name="FeelingValueLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "0.5"
+label_settings = SubResource("LabelSettings_djxo5")

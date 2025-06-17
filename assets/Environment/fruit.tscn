@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3yb5sem7la3h"]
+
+[ext_resource type="Script" uid="uid://ydiuhf3caw13" path="res://scripts/Environment/Interactables/Fruit.cs" id="1_6ufcu"]
+[ext_resource type="Texture2D" uid="uid://6u3suu8385jq" path="res://assets/Sprout Lands - Sprites - premium pack/Objects/Trees, stumps and bushes.png" id="2_yu41l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t45jj"]
+radius = 6.0
+
+[node name="Fruit" type="Node2D" node_paths=PackedStringArray("Sprite", "body2D")]
+y_sort_enabled = true
+script = ExtResource("1_6ufcu")
+Sprite = NodePath("Sprite2D")
+body2D = NodePath("StaticBody2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yu41l")
+hframes = 12
+vframes = 7
+frame = 30
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Fruit"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_t45jj")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cttesqect13nr"]
+
+[ext_resource type="Texture2D" uid="uid://45hwag54bqm8" path="res://assets/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Icons/white icons.png" id="1_kpah5"]
+
+[node name="TalkBubble" type="Marker2D"]
+
+[node name="Bubble" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(6, -3)
+texture = ExtResource("1_kpah5")
+hframes = 6
+vframes = 3
+frame = 1
